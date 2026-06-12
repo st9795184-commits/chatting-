@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat System - Real Time Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>💬 Real-Time Chat</h1>
+            <p>Connect with friends instantly!</p>
+        </div>
+        
+        <div id="loginScreen" class="login-screen">
+            <input type="text" id="usernameInput" placeholder="Enter your username..." maxlength="20">
+            <button onclick="joinChat()">Join Chat →</button>
+        </div>
+        
+        <div id="chatArea" class="chat-area">
+            <div class="online-status" id="onlineStatus">
+                🟢 Connected to chat server
+            </div>
+            <div class="messages-area" id="messagesArea">
+                <div style="text-align: center; color: #999; padding: 20px;">
+                    No messages yet. Start the conversation!
+                </div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="messageInput" placeholder="Type your message..." maxlength="200">
+                <button onclick="sendMessage()">Send →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
